@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Dog Viewer is an app that allows users to admire their favorite dogs based on breeds they choose."
+		/>
+		<title>Dog Viewer</title>
+		<link href="./css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1 class="header-title">Dog Viewer</h1>
+				<select name="breeds" id="breeds">
+					<option value="default" selected>Select a breed</option>
+				</select>
+			</div>
+		</header>
+
+		<main>
+			<div class="container">
+				<span class="spinner"></span>
+				<img
+					src=""
+					alt="A random dog image."
+					class="dog-img block"
+					width="700"
+					height="525"
+				/>
+			</div>
+		</main>
+
+		<footer>
+			<p class="footer-text">
+				Created by
+				<a href="https://github.com/MariusSMA" target="_blank">Marius S</a>.
+			</p>
+		</footer>
+
+		<script src="./js/main.js"></script>
+	</body>
+</html>

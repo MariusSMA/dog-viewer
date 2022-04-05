@@ -1,0 +1,169 @@
+/* Font import */
+
+@font-face {
+	font-family: "Poppins";
+	src: url("../fonts/poppins-bold-webfont.woff2") format("woff2"),
+		url("../fonts/poppins-bold-webfont.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url("../fonts/poppins-regular-webfont.woff2") format("woff2"),
+		url("../fonts/poppins-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* CSS Variables */
+
+:root {
+	--primary: #242057;
+	--secondary: #fbfbff;
+	--radius: 0.5rem;
+}
+
+/* General styles */
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+/* Mobile Layout */
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	background-color: var(--secondary);
+}
+
+a {
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--secondary);
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.container {
+	max-width: 64rem;
+	margin: 0 auto;
+}
+
+header {
+	padding-inline: 1rem;
+	background-color: var(--primary);
+}
+
+header .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 1rem 0;
+}
+
+.header-title {
+	margin: 0;
+	color: #fff;
+}
+
+#breeds {
+	width: 10rem;
+	font-family: inherit;
+	padding: 0.5rem 0.5rem;
+	border: none;
+	border-radius: var(--radius);
+	background-color: var(--secondary);
+	color: var(--primary);
+}
+
+main {
+	display: grid;
+	place-content: center;
+	flex: 1;
+	position: relative;
+}
+
+main::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: 0.5;
+	background-image: url("../images/background-pattern.png");
+}
+
+.spinner {
+	display: none;
+	width: 5rem;
+	height: 5rem;
+	border: 0.75rem solid var(--primary);
+	border-right-color: transparent;
+	border-radius: 50%;
+	animation: spin 1.25s ease-out infinite;
+}
+
+.dog-img {
+	display: none;
+	max-width: 85%;
+	max-height: 50vh;
+	margin: 0 auto;
+	border-radius: var(--radius);
+	object-fit: cover;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.show {
+	display: block;
+}
+
+footer {
+	background-color: var(--primary);
+}
+
+.footer-text {
+	text-align: center;
+	color: var(--secondary);
+}
+
+/* Desktop Layout */
+
+@media (min-width: 25rem) {
+	img {
+		max-height: 75vh;
+	}
+
+	header .container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+/* Keyframes */
+
+@keyframes spin {
+	to {
+		transform: rotateZ(360deg);
+	}
+}
