@@ -24,7 +24,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://github.com/MariusSMA/dog-viewer)
-- [Live Site URL](https://mariussma.github.iodog-viewer/)
+- [Live Site URL](https://mariussma.github.io/dog-viewer)
 
 ## My process
 
